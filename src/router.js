@@ -18,6 +18,12 @@ export default new Router({
       name: "about",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
-    }
+    },
+    {
+    path: "/anchors",
+    name: "anchors",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "./components/anchors.vue")
+  }
   ]
 });

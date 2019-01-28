@@ -6,7 +6,6 @@
       <div class="floor floor_four"></div>
       <div class="floor floor_five"></div>
 
-
     <div class="right_anchor">
       <ul>
         <li class="dot" @click="anchors(1)"></li>
@@ -145,7 +144,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
   .sphere_container{
     .floor{
       height: 1000px;

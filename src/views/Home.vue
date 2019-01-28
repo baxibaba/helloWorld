@@ -7,7 +7,13 @@
       <img @click="pausedOrRunning" src="../images/user.png" :style="{width:100+'px',height:100+'px',animationPlayState:state?'running':'paused'}" alt="">
    
       <audio id="my-audio"  type="audio/mpeg" controlsList="nodownload" controls src="http://other.web.rd01.sycdn.kuwo.cn/resource/n3/7/75/2942928835.mp3" autoplay="autoplay"></audio>
+    
     </header>
+    <div class="content">
+      <router-link to="/anchors.vue">
+      <div>anchors</div>
+      </router-link>
+    </div>
 
     <div class="footer">
       <router-link to="/" style="text-decoration:none" class="selected">
@@ -21,6 +27,7 @@
   </div>
 </template>
 <script>
+
 export default {
   data() {
     return {

@@ -1,4 +1,4 @@
-## 从服务器 cp 文件夹 到本地
+## 从服务器 cp 文件夹 到本地   ssh root@162.219.125.154 -p 29707
 
 ```Bash
     scp -r root@xxx.xxx.xxx.xxx:/etc/ /Users/baxi/helloword

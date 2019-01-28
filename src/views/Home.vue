@@ -1,6 +1,7 @@
 <template>
 
   <div class="my">
+    <div class="line"></div>
     <h1>八喜</h1>
 
     <header>
@@ -58,6 +59,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
 header img {
   display: inline-block;
   background: red;
@@ -65,6 +67,39 @@ header img {
   animation-play-state: running;
   box-shadow: 1px 1px 10px 10px red;
 }
+*{
+  padding: 0;
+  margin: 0;
+}
+.line {
+			width: 375px;
+			height: 50px;
+			margin: 0px auto;
+			border-radius: 10px;
+			/* 线性渐变 */
+			background-image: linear-gradient(135deg,
+				yellow 25%,
+				green 25%,
+				green 50%,
+				yellow 50%,
+				yellow 75%,
+				green 75%,
+				green 100%);
+
+			background-size: 100px 100px;
+			animation: move 2s linear infinite;
+		}
+
+		@keyframes move {
+			from {
+				background-position: 0px;
+			}
+
+			to {
+
+				background-position: 100px;
+			}
+		}
 @keyframes circle {
   from {
     transform: rotate(0);
@@ -77,7 +112,9 @@ header img {
 #my-audio {
   margin-top: 30px;
 }
-
+h1{
+  margin-bottom: 20px;
+}
 .footer {
   height: 34px;
   line-height: 34px;

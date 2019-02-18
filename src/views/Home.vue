@@ -6,13 +6,13 @@
 
     <header>
       <img @click="pausedOrRunning" src="../images/user.png" :style="{width:100+'px',height:100+'px',animationPlayState:state?'running':'paused'}" alt="">
-   
-      <audio id="my-audio"  type="audio/mpeg" controlsList="nodownload" controls src="http://other.web.rd01.sycdn.kuwo.cn/resource/n3/7/75/2942928835.mp3" autoplay="autoplay"></audio>
-    
+
+      <audio id="my-audio" type="audio/mpeg" controlsList="nodownload" controls src="http://other.web.rd01.sycdn.kuwo.cn/resource/n3/7/75/2942928835.mp3" autoplay="autoplay"></audio>
+
     </header>
     <div class="content">
-      <router-link to="/anchors.vue">
-      <div>anchors</div>
+      <router-link to="/exercise">
+        <div>anchors</div>
       </router-link>
     </div>
 
@@ -28,7 +28,6 @@
   </div>
 </template>
 <script>
-
 export default {
   data() {
     return {
@@ -59,7 +58,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
 header img {
   display: inline-block;
   background: red;
@@ -67,39 +65,40 @@ header img {
   animation-play-state: running;
   box-shadow: 1px 1px 10px 10px red;
 }
-*{
+* {
   padding: 0;
   margin: 0;
 }
 .line {
-			width: 375px;
-			height: 50px;
-			margin: 0px auto;
-			border-radius: 10px;
-			/* 线性渐变 */
-			background-image: linear-gradient(135deg,
-				yellow 25%,
-				green 25%,
-				green 50%,
-				yellow 50%,
-				yellow 75%,
-				green 75%,
-				green 100%);
+  width: 375px;
+  height: 50px;
+  margin: 0px auto;
+  border-radius: 10px;
+  /* 线性渐变 */
+  background-image: linear-gradient(
+    135deg,
+    yellow 25%,
+    green 25%,
+    green 50%,
+    yellow 50%,
+    yellow 75%,
+    green 75%,
+    green 100%
+  );
 
-			background-size: 100px 100px;
-			animation: move 2s linear infinite;
-		}
+  background-size: 100px 100px;
+  animation: move 2s linear infinite;
+}
 
-		@keyframes move {
-			from {
-				background-position: 0px;
-			}
+@keyframes move {
+  from {
+    background-position: 0px;
+  }
 
-			to {
-
-				background-position: 100px;
-			}
-		}
+  to {
+    background-position: 100px;
+  }
+}
 @keyframes circle {
   from {
     transform: rotate(0);
@@ -112,7 +111,7 @@ header img {
 #my-audio {
   margin-top: 30px;
 }
-h1{
+h1 {
   margin-bottom: 20px;
 }
 .footer {

@@ -7,8 +7,7 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: "/",
       name: "home",
       component: Home
@@ -17,13 +16,13 @@ export default new Router({
       path: "/about",
       name: "about",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+        import( /* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-    path: "/anchors",
-    name: "anchors",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "./components/anchors.vue")
-  }
+      path: "/exercise",
+      name: "exercise",
+      component: () =>
+        import( /* webpackChunkName: "about" */ "./views/exercise.vue")
+    }
   ]
 });

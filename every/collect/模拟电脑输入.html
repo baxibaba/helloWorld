@@ -1,0 +1,34 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body>
+	<script>
+	
+	window.onload = function (){
+var text = document.getElementById('text');
+var str = '使用JS实现一个打字机字符输出效果使用JS实现一个打字机字符输出效果使用JS实现一个打字机字符输出效果使用JS实现一个打字机字符输出效果';
+var arr = [];
+for(var i=0;i<str.length;i++){
+arr.push(str[i])
+}
+var text1 = '';
+var num = 0;
+var timer = setInterval(function (){
+if(num < arr.length){
+text1 += arr[num];
+text.innerHTML = text1
+num++;
+} else {
+clearInterval(timer)
+}
+},200)
+}
+	</script>
+	<div id='text'></div>
+</body>
+
+</html>

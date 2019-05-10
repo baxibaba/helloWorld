@@ -1,0 +1,8 @@
+{
+  "backgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "FormIdButton": "/component/FormIdButton/index",
+    "avatar-image": "/component/avatar-image/index"
+  }
+}

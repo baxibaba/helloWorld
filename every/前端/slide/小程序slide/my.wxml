@@ -1,0 +1,8 @@
+<view class="container" style="transform: translate({{diffX}}rpx, 0)">
+    <view class="rect">ONE</view>
+    <view class="rect">TWO</view>
+    <view class="rect">THREE</view>
+</view>
+
+<button bindtap="onPrev">上一个</button>
+<button bindtap="onNext">下一个</button>

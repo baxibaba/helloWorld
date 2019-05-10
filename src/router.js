@@ -23,6 +23,12 @@ export default new Router({
       name: "exercise",
       component: () =>
         import( /* webpackChunkName: "about" */ "./views/exercise.vue")
+    },
+    {
+      path: "/parent",
+      name: "parent",
+      component: () =>
+        import( /* webpackChunkName: "about" */ "./views/parent.vue")
     }
   ]
 });

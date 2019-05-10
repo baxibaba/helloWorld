@@ -14,6 +14,10 @@
       <router-link to="/exercise">
         <div>anchors</div>
       </router-link>
+
+           <router-link to="/parent">
+        <div>parent</div>
+      </router-link>
     </div>
 
     <div class="footer">
@@ -24,6 +28,7 @@
       <router-link to="/About" style="text-decoration:none">
         <div>我的</div>
       </router-link>
+      
     </div>
   </div>
 </template>

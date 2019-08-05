@@ -15,8 +15,12 @@
         <div>anchors</div>
       </router-link>
 
-           <router-link to="/parent">
+      <router-link to="/parent">
         <div>parent</div>
+      </router-link>
+
+      <router-link to="/child">
+        <div>child</div>
       </router-link>
     </div>
 

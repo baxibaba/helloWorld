@@ -29,6 +29,12 @@ export default new Router({
       name: "parent",
       component: () =>
         import( /* webpackChunkName: "about" */ "./views/parent.vue")
+    },
+    {
+      path: "/child",
+      name: "child",
+      component: () =>
+        import( /* webpackChunkName: "about" */ "./views/child.vue")
     }
   ]
 });

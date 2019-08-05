@@ -15,6 +15,11 @@
 ```Bash
     scp /Users/baxi/helloword -P 29707 root@xxxxxxx:/etc/..
 ```
+## 从本地 cp(文件) 到服务器
+
+```Bash
+    scp -r /Users/baxi/helloworld/dist root@XXXXXXXXX:/usr/local
+```
 
 ## nginx 配置
 

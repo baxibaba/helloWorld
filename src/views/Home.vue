@@ -22,6 +22,8 @@
       <router-link to="/child">
         <div>child</div>
       </router-link>
+      <el-input v-model="input" placeholder="请输入内容"></el-input>
+      <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
     </div>
 
     <div class="footer">
@@ -40,7 +42,9 @@
 export default {
   data() {
     return {
-      state: true //动画的选择状态
+      state: true, //动画的选择状态
+      num:1,
+      input: ''
     };
   },
   methods: {
@@ -55,7 +59,10 @@ export default {
         this.state = true;
         myaudio.play();
       }
-    }
+    },
+    handleChange(value) {
+        console.log(value);
+      }
   },
   mounted() {
     let myaudio = document.getElementById("my-audio");

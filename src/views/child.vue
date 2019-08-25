@@ -5,6 +5,8 @@
       </div>
   </div>
 </template>
+
+
 <script>
 export default {
   data(){
@@ -19,11 +21,22 @@ export default {
     }
   }
 </script>
-<style  scoped>
-  .child{
-    padding: 2px;
-    height: 100vh;
-    border:1px solid red;
+
+<style>
+  .custom-tree-node {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-right: 8px;
+    height: 100px;
+  }
+  .el-tree-node {
+    height: 100px;
+    padding: 20px;
+  }
+  .el-input__inner{
+    width: 50px;
   }
 </style>
-

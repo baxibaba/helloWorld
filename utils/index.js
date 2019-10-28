@@ -30,8 +30,8 @@ exports.installDependencies = function installDependencies(
   executable = 'npm',
   color
 ) {
-  console.log(`\n\n# ${color('模版下载成功，正在安装项目依赖，请稍后 ...')}`)
-  console.log('# ------------------------------------------\n')
+  console.log(`\n\n# ${color('模板要正在下载中 ...')}`)
+  console.log('# ========================\n')
   return runCommand(executable, ['install'], {
     cwd,
   })
@@ -49,9 +49,11 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
         'Running eslint --fix to comply with chosen preset rules...'
       )}`
     )
-    console.log('# ------------------------------\n')
+    console.log('# ========================\n')
     const args =
-      data.autoInstall === 'npm' ? ['run', 'lint', '--', '--fix'] : ['run', 'lint', '--fix']
+      data.autoInstall === 'npm'
+        ? ['run', 'lint', '--', '--fix']
+        : ['run', 'lint', '--fix']
     return runCommand(data.autoInstall, args, {
       cwd,
     })
@@ -63,16 +65,12 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
  * Prints the final message with instructions of necessary next steps.
  * @param {Object} data Data from questionnaire.
  */
-exports.printMessage = function printMessage(data, {
-  green,
-  yellow
-}) {
+exports.printMessage = function printMessage(data, { green, yellow }) {
   const message = `
-# ----------------------------
-# ${green('前端 vue.js 工程初始化完成!')}
-# ----------------------------
+# ${green('Project initialization finished!')}
+# ========================
 
-快速开始:
+To get started:
 
   ${yellow(
     `${data.inPlace ? '' : `cd ${data.destDirName}\n  `}${installMsg(
@@ -80,6 +78,7 @@ exports.printMessage = function printMessage(data, {
     )}${lintMsg(data)}npm run dev`
   )}
   
+Documentation can be found at https://vuejs-templates.github.io/webpack
 `
   console.log(message)
 }
@@ -92,9 +91,9 @@ exports.printMessage = function printMessage(data, {
 function lintMsg(data) {
   return !data.autoInstall &&
     data.lint &&
-    lintStyles.indexOf(data.lintConfig) !== -1 ?
-    'npm run lint -- --fix (or for yarn: yarn run lint --fix)\n  ' :
-    ''
+    lintStyles.indexOf(data.lintConfig) !== -1
+    ? 'npm run lint -- --fix (or for yarn: yarn run lint --fix)\n  '
+    : ''
 }
 
 /**
@@ -103,8 +102,6 @@ function lintMsg(data) {
  * @param {Object} data Data from the questionnaire
  */
 function installMsg(data) {
-  // set autoInstall property to true
-  data.autoInstall = true;
   return !data.autoInstall ? 'npm install (or if using yarn: yarn)\n  ' : ''
 }
 
@@ -121,7 +118,8 @@ function runCommand(cmd, args, options) {
     const spwan = spawn(
       cmd,
       args,
-      Object.assign({
+      Object.assign(
+        {
           cwd: process.cwd(),
           stdio: 'inherit',
           shell: true,

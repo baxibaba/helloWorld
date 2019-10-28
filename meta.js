@@ -34,25 +34,25 @@ module.exports = {
   
   prompts: {
     name: {
-      when: 'isNotTest',
+      when: 'false',
       type: 'string',
       required: true,
       message: 'Project name',
     },
     description: {
-      when: 'isNotTest',
+      when: 'false',
       type: 'string',
       required: false,
       message: 'Project description',
       default: 'A Vue.js project',
     },
     author: {
-      when: 'isNotTest',
+      when: 'false',
       type: 'string',
       message: 'Author',
     },
     e2e: {
-      when: 'isNotTest',
+      when: 'false',
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
     },

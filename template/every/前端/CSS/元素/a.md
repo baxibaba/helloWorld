@@ -1,1 +1,0 @@
-* `-webkit-tap-highlight-color: rgba(0,0,0,0)`: 去掉 a标签 1.在移动端; 2.点击状态下 的淡蓝色背景;

@@ -67,7 +67,7 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
  */
 exports.printMessage = function printMessage(data, { green, yellow }) {
   const message = `
-# ${green('Project initialization finished!')}
+# ${green('模板下载完成')}
 # ========================
 
 To get started:

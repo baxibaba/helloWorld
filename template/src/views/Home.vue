@@ -76,10 +76,10 @@ export default {
 <style lang="less" scoped>
 header img {
   display: inline-block;
-  background: red;
+  background: #fff;
   animation: circle 6s linear infinite;
   animation-play-state: running;
-  box-shadow: 1px 1px 10px 10px red;
+  box-shadow: 1px 1px 10px 10px #fff;
 }
 * {
   padding: 0;
